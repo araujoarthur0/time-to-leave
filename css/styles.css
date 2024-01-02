@@ -1,6 +1,11 @@
 /* stylelint-disable no-descending-specificity */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+/* Font from https://fonts.google.com/specimen/Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format("truetype-variations");
+  font-weight: 1 999;
+}
 
 /* This is an implicit, and an explicit declaration of the Default color scheme */
 
@@ -162,7 +167,6 @@ body {
 
 .container {
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 70px;
 }
 
 @media (max-width: 768px) {
@@ -173,6 +177,10 @@ body {
 
 .dayheader {
   text-align: center;
+}
+
+.th :only-child {
+  -webkit-user-drag: none;
 }
 
 .th-month-name {
@@ -198,6 +206,7 @@ body {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  user-select: none;
 }
 
 .title-header-img {
@@ -208,6 +217,8 @@ body {
 
 .title-header-img img {
   float: right;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .error-tr {
@@ -219,6 +230,10 @@ body {
   margin-bottom: auto;
   font-size: 400%;
   float: left;
+}
+
+#calendar.container {
+  margin-bottom: 70px;
 }
 
 #calendar table {
@@ -367,7 +382,7 @@ body {
 .waived-day-text {
   text-align: right !important;
   margin-top: auto;
-  font-size: 90%;
+  font-size: 80%;
   font-variant-caps: all-petite-caps;
 }
 
@@ -416,6 +431,10 @@ body {
 .punch-button:disabled {
   opacity: 0.5;
   color: var(--punch-disable-bground);
+}
+
+.punch-button img {
+  -webkit-user-drag: none;
 }
 
 #punch-button-label {
@@ -610,6 +629,8 @@ input:disabled + .slider {
 #preferences-window select,
 #preferences-window option,
 #preferences-window input {
+  font-size: 14px;
+  font-weight: 300;
   font-variant-caps: all-petite-caps;
   border: none;
   height: inherit;
@@ -621,6 +642,8 @@ input:disabled + .slider {
 }
 
 #preferences-window .weekdays-selector input[type=checkbox] + label {
+  font-size: 14px;
+  font-weight: 300;
   font-variant-caps: all-petite-caps;
   display: inline-block;
   border-radius: 10px;
@@ -650,6 +673,8 @@ input:disabled + .slider {
 }
 
 #preferences-window p {
+  font-size: 14px;
+  font-weight: 300;
   font-variant-caps: all-petite-caps;
   text-align: left;
 }
@@ -671,7 +696,6 @@ input:disabled + .slider {
 #preferences-window input[type="date"].date-right::-webkit-datetime-edit {
   text-align: right;
   position: relative;
-  left: 25px;
 }
 
 #preferences-window #hours-per-day, #break-time-interval {
